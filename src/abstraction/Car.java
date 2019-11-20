@@ -1,7 +1,17 @@
-package abstraction; //hiding of implementation details from users
+package abstraction;
 
-public interface Car {
-	public abstract void start(); //method declared //they are generally abstract type method
-    public void stop(); //method can't be implemented
-    public void brake();
+public interface Car extends Dmv, Tlc{//an interface can extend more than one interface class
+	public abstract void start();// curly brace absent means that method is declared, in an interface, method can NOT be implemented
+	public void stop();// by default, methods in interface are Abstract so need to write 'abstract'
+	// from java 8, static and default method is implemented in interface
+	
+	public static void honk () {
+	System.out.println("Hydrolic Honk");
+	}
+	
+	public default void gear() {
+		System.out.println("Automatic Gear");
+	}
 }
+
+

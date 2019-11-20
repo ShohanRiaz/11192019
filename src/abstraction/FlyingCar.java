@@ -1,11 +1,12 @@
 package abstraction;
-// an abstract class can implement more than one interface
-
-public abstract class FlyingCar implements Drone, FlyingObject { //abstract class contain abstract and non abstract method
-
-	public abstract void autopilot(); //method declared
-
-	public void flyingFeature() { //method implemented
-		System.out.println("Dreaming for a car to fly");
+//abstract class can contain abstract and non abstract methods
+public abstract class FlyingCar extends Nissan implements MetroNorth, Marta{//a class can extend ONLY one class or abstract class
+	public void autopilot() {
+		System.out.println("Has Auto Pilot Facility");
 	}
+	public abstract void flyingFeature();
+	
+	
+	
+
 }
